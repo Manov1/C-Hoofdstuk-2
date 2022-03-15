@@ -1,0 +1,55 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace Demo_2._1
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+            Btn1.Click += Btn1_Click;
+            Btn2.Click += Btn2_Click;
+            Btn3.Click += Btn3_Click;
+        }
+
+        private void Btn3_Click(object sender, RoutedEventArgs e)
+        {
+            LblA.Content = "A";
+            LblB.Content = "B";
+            LblC.Content = "C";
+            Btn1.Content = "Button";
+            Btn2.Content = "Button";
+            Btn3.Content = "Button";
+        }
+
+        private void Btn2_Click(object sender, RoutedEventArgs e)
+        {
+            Btn1.Content = "Nee";
+            Btn2.Content = "Nee";
+            Btn3.Content = "Nee";
+        }
+
+        private void Btn1_Click(object sender, RoutedEventArgs e)
+        {
+            LblA.Content = "Ja";
+            LblB.Content = "Ja";
+            LblC.Content = "Ja";
+        }
+    }
+}
